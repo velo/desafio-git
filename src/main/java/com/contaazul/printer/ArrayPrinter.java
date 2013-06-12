@@ -2,12 +2,10 @@ package com.contaazul.printer;
 
 public class ArrayPrinter {
 
-	public void printArray(Object[] input)
+	public <E> void printArray(E[] input)
 	{
-		for (int i = 0; i < input.length; i++) {
-			Object element = input[i];
-
-			System.out.printf( "%s ", new Object[] { element } );
+		for (E element : input) {
+			System.out.printf( "%s ", element );
 		}
 		System.out.println();
 	}
